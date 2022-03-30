@@ -4,7 +4,7 @@
 
 ## Integrantes del equipo
 
-[Nombres, apellidos, y usuario GitHub de los integrantes del equipo.]
+Sofía Sánchez Solla (sofia.sanchez.solla), Irene Rico Martín (irene.rico), Teresa Corrales Torresano (teresa.ctorresano)
 
 ## Objetivos del trabajo
 
