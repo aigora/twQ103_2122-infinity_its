@@ -1,6 +1,59 @@
-#include <studio.h>
+#include<stdio.h>
+#define TAM_MAX 50
 
-int main() {
-	
-	
+void Banner (){
+	printf ("Bienvenido a Infinity_ITS, esperamos que pases un gran rato y disfrutes del juego\n");
+	printf("------------------------------------------------------------------------------------------------------------------------");
+	printf("                                                  (.)<            >(.)\n");
+    printf("                                                  ||                || \n");
+    printf("                                                  ||    INFINITY    ||\n");
+    printf("                                             _ _ _||    ********    ||_ _ _ \n");
+    printf("                                            (_ _ _ _)               (_ _ _ _)\n");
+    printf("                                               |_  |_               _|  _|\n");
+    printf("------------------------------------------------------------------------------------------------------------------------\n");
+	return; 
 }
+
+char menu (){
+	char opcion1; 
+		do {
+		fflush(stdin); 
+		printf("¿Que desea hacer?\n"); 
+		printf("A- Ver las reglas del juego\n");  
+		printf("B- Iniciar el juego\n");  
+		scanf("%c", & opcion1); 
+		switch (opcion1){
+			case 'A': 
+			case 'a': 
+			fflush(stdin); 
+			printf("El primer jugador registrado comienza tirando el dado, despues avanza el numero de casillas indicado por el dado. Si el jugador cae en una casilla con oca, le saldra una pregunta que debe responder. Si acierta la pregunta permanece en la casilla de oca, si por el contrario falla la pregunta, retrocede hasta donde se encontraba anteriormente. Si el jugador cae en una casilla en donde no hay una oca, permanece en esa casilla. El primer jugador en llegar a la casilla final gana el juego y este mismo finaliza.\n");
+			break; 
+		}
+	} 
+	while (opcion1!='B'); //VER COMO HACER PARA QUE CON b NOS SALGA TAMBIEN 
+	printf("El juego va a iniciar. ¡PREPARATE PARA AVERIGUAR COMO DE LIST@ ERES!\n");
+	return opcion1; 
+}
+
+struct TJugador {
+	char avatar[50];  
+};
+
+int main (){
+	struct TJugador jugadores[TAM_MAX]; 
+	int i, n_jugadores; //n_jugadores se refiere al número de jugadores
+	char opcion1; 
+	Banner(); 
+	printf ("Inserte el numero de jugadores\n"); 
+	scanf ("%d", &n_jugadores); 
+	
+	for (i=0; i<n_jugadores; i++){
+		printf("Por favor registrate:\n"); 
+		scanf("%s", jugadores[i].avatar); 
+	}
+	opcion1= menu(); 
+	
+	return 0; 
+}
+
+
