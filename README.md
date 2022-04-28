@@ -1,5 +1,3 @@
-# [Título del trabajo]
-
 INFINITY_ITS
 
 [Descripción breve del proyecto a realizar (2-3 frases).]
