@@ -1,16 +1,18 @@
 #include<stdio.h>
 #define TAM_MAX 50
+#include<windows.h>
+#define color SetConsoleTextAttribute
 
 void Banner (){
+	HANDLE hConsole = GetStdHandle( STD_OUTPUT_HANDLE );
 	printf ("Bienvenido a Infinity_ITS, esperamos que pases un gran rato y disfrutes del juego\n");
-	printf("------------------------------------------------------------------------------------------------------------------------");
-	printf("                                                  (.)<            >(.)\n");
-    printf("                                                  ||                || \n");
-    printf("                                                  ||    INFINITY    ||\n");
-    printf("                                             _ _ _||    ********    ||_ _ _ \n");
-    printf("                                            (_ _ _ _)               (_ _ _ _)\n");
-    printf("                                               |_  |_               _|  _|\n");
-    printf("------------------------------------------------------------------------------------------------------------------------\n");
+    printf( "      (.)");color(hConsole, 6); printf("<            >");color(hConsole, 7);printf("(.)\n");
+    color (hConsole, 7); 
+    printf("      ||                || \n");
+    printf("      ||   "); color(hConsole, 11); printf(" INFINITY "); color(hConsole, 7); printf("   ||\n");
+    printf(" _ _ _||   "); color (hConsole, 1); printf(" ********  "); color(hConsole, 7); printf("  ||_ _ _ \n");
+    printf("(_ _ _ _)               (_ _ _ _)\n");
+    color(hConsole, 6); printf("   |_  |_               _|  _|\n"); color(hConsole, 7);
 	return; 
 }
 
