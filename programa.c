@@ -3,12 +3,14 @@
 
 void Banner (){
 	printf ("Bienvenido a Infinity_ITS, esperamos que pases un gran rato y disfrutes del juego\n");
-	printf("      (.)<            >(.)\n");
-    printf("      ||                || \n");
-    printf("      ||    INFINITY    ||\n");
-    printf(" _ _ _||    ********    ||_ _ _ \n");
-    printf("(_ _ _ _)               (_ _ _ _)\n");
-    printf("   |_  |_               _|  _|\n");
+	printf("------------------------------------------------------------------------------------------------------------------------");
+	printf("                                                  (.)<            >(.)\n");
+    printf("                                                  ||                || \n");
+    printf("                                                  ||    INFINITY    ||\n");
+    printf("                                             _ _ _||    ********    ||_ _ _ \n");
+    printf("                                            (_ _ _ _)               (_ _ _ _)\n");
+    printf("                                               |_  |_               _|  _|\n");
+    printf("------------------------------------------------------------------------------------------------------------------------\n");
 	return; 
 }
 
