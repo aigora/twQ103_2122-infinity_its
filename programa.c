@@ -20,7 +20,7 @@ char menu (){
 	char opcion1; 
 		do {
 		fflush(stdin); 
-		printf("¿Que desea hacer?\n"); 
+		printf("Que desea hacer?\n"); 
 		printf("A- Ver las reglas del juego\n");  
 		printf("B- Iniciar el juego\n");  
 		scanf("%c", & opcion1); 
@@ -32,8 +32,7 @@ char menu (){
 			break; 
 		}
 	} 
-	while (opcion1!='B'); //VER COMO HACER PARA QUE CON b NOS SALGA TAMBIEN 
-	printf("El juego va a iniciar. ¡PREPARATE PARA AVERIGUAR COMO DE LIST@ ERES!\n");
+	while (opcion1!='B' && opcion1!='b'); //VER COMO HACER PARA QUE CON b NOS SALGA TAMBIEN 
 	return opcion1; 
 }
 
@@ -41,21 +40,88 @@ struct TJugador {
 	char avatar[50];  
 };
 
+void tablero(int tam){
+	
+	int fila,columna;
+     int matriz[tam][tam];
+	
+	printf("\n");
+	printf("E: Entrada al tablero\n");
+	printf("\n");
+	
+
+	for (columna=1;columna<=tam;columna++){
+    	if(columna == tam){
+    		printf("    E");
+		}else{
+			printf("    ");
+			printf("%d",columna);
+			printf(" ");
+        }
+    }
+    printf("\n");
+    
+	for (columna=1;columna<=tam;columna++){
+    	if(columna == 1){
+    		printf("     ___ ");
+		}else{
+			printf(" ___ ");
+        }
+    }
+
+	for(fila=1;fila<=tam;fila++) {
+         printf("\n");
+         for(columna=1;columna<=tam;columna++) {
+         	if(columna==1){
+         		printf("  %d |___|",fila);
+			 }else{
+			 	printf("|___|");
+			 }
+		}
+    }
+    printf("\n");
+}
+
 int main (){
 	struct TJugador jugadores[TAM_MAX]; 
 	int i, n_jugadores; //n_jugadores se refiere al número de jugadores
 	char opcion1; 
 	Banner(); 
+	opcion1= menu();
 	printf ("Inserte el numero de jugadores\n"); 
 	scanf ("%d", &n_jugadores); 
 	
 	for (i=0; i<n_jugadores; i++){
-		printf("Por favor registrate:\n"); 
+		printf("Nombre del jugador %d:\n",i+1); 
 		scanf("%s", jugadores[i].avatar); 
-	}
-	opcion1= menu(); 
+	} 
 	
-	return 0; 
+	printf("El juego va a iniciar. PREPARATE PARA AVERIGUAR COMO DE LIST@ ERES!\n");
+	
+	char tamano; 
+	do{
+		fflush(stdin); 
+		printf("Como de grande quiere el tablero?\n"); 
+		printf("D- Diminuto (16 casillas)\n");  
+		printf("N- Normalito (25 casillas)\n");  
+	    printf("G- Grandote (36 casillas)\n"); 
+		scanf("%c", &tamano);
+		
+	    if(tamano !='D' && tamano !='d' && tamano !='N' && tamano !='n' && tamano !='G' && tamano !='g'){
+			printf("Esa opcion no es valida!! Vuelve a intentarlo!!\n");
+			scanf("%c", & tamano);
+		}	
+		
+	}while(tamano !='D' && tamano !='d' && tamano !='N' && tamano !='n' && tamano !='G' && tamano !='g');
+
+    if(tamano == 'D' || tamano == 'd'){
+    	tablero(4);
+	}if(tamano == 'N' || tamano == 'n'){
+    	tablero(5);
+	}if(tamano == 'G' || tamano == 'g'){
+    	tablero(6);
+    }
+	return 0;  
 }
 
 
