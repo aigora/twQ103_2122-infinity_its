@@ -114,9 +114,9 @@ int main (){
 	do{
 		fflush(stdin); 
 		printf("Como de grande quiere el tablero?\n"); 
-		printf("D- Diminuto (16 casillas)\n");  
-		printf("N- Normalito (25 casillas)\n");  
-	    printf("G- Grandote (36 casillas)\n"); 
+		printf(" D- Diminuto (16 casillas)\n");  
+		printf(" N- Normalito (25 casillas)\n");  
+	    printf(" G- Grandote (36 casillas)\n"); 
 		scanf("%c", &tamano);
 		
 	    if(tamano !='D' && tamano !='d' && tamano !='N' && tamano !='n' && tamano !='G' && tamano !='g'){
