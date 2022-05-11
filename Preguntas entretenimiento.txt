@@ -1,24 +1,48 @@
-1.¿Quién fue el famoso cantante del grupo musical Queen? Freddie Mercury 
-2.¿A qué banda de música metal pertenece el disco Master of Puppets? Metálica 
-3.¿Por qué película superventas de los años 90 es conocido el director y productor James Cameron? Titanica
-4.¿A qué saga de películas pertenece el personaje conocido como Jack Sparrow? Piratas del Caribe 
-5.¿Cómo se llama el antagonista principal de la película de Disney El Rey León? Scar
-6.¿Cómo se llama el antagonista principal de la película de Disney "El Rey León"? Stranger Things 
-7.¿Quién inventó la caja de tortura china? Houdini 
-8.¿Cuántas personas formaron parte del elenco principal del exitoso programa de televisión Friends? 6
-9.¿Qué vengador usa un martillo? Thor 
-10. ¿Qué película creó la palabra mágica "supercalifragilisticoespialidoso"? Mary Poppins 
-11.¿De qué país es la banda ABBA? Suecia
-12.¿Quién dijo la frase ‘Yo soy tu padre’? Darth Vader 
-13.¿Cuántos años tenía Michael Jackson cuando murió? 50
-14.¿De qué forma son los pantalones de Bob Esponja? Cuadrado 
-15.¿Qué rapero ha ganado más premios Grammy? Eminem 
-16.¿Cómo se llama la bella durmiente? Aurora
-17.¿Cómo se llama la bella durmiente? Mujercitas 
-18.¿Cuál fue el primer refresco que se llevó al espacio? Coca cola
-19.¿Quién escribió un diario famoso mientras se escondía de los nazis en Amsterdam? Ana Frank 
-20.En Los tres cerditos, ¿de qué está hecha la casa más fuerte? Ladrillos 
-21.¿Cuál fue el primer juguete que se publicitó en televisión? Mr Potato 
-22.¿Alrededor de cuántas papilas gustativas tiene la lengua humana de promedio? 10.000 
-23.¿Cuál fue la primera película animada de largometraje que se lanzó? Blanca Nieves y los siete enanitos
-24.¿Cada cuántos años se llevan a cabo los Juegos Olímpicos? 4
+1.¿Quién fue el famoso cantante del grupo musical Queen? 
+Freddie Mercury 
+2.¿A qué banda de música metal pertenece el disco Master of Puppets? 
+Metálica 
+3.¿Por qué película superventas de los años 90 es conocido el director y productor James Cameron? 
+Titanica
+4.¿A qué saga de películas pertenece el personaje conocido como Jack Sparrow? 
+Piratas del Caribe 
+5.¿Cómo se llama el antagonista principal de la película de Disney El Rey León? 
+Scar
+6.¿Cómo se llama el antagonista principal de la película de Disney "El Rey León"?
+Stranger Things 
+7.¿Quién inventó la caja de tortura china? 
+Houdini 
+8.¿Cuántas personas formaron parte del elenco principal del exitoso programa de televisión Friends? 
+seis
+9.¿Qué vengador usa un martillo? 
+Thor 
+10. ¿Qué película creó la palabra mágica "supercalifragilisticoespialidoso"? 
+Mary Poppins 
+11.¿De qué país es la banda ABBA? 
+Suecia
+12.¿Quién dijo la frase ‘Yo soy tu padre’? 
+Darth Vader 
+13.¿Cuántos años tenía Michael Jackson cuando murió? 
+50
+14.¿De qué forma son los pantalones de Bob Esponja? 
+Cuadrado 
+15.¿Qué rapero ha ganado más premios Grammy? 
+Eminem 
+16.¿Cómo se llama la bella durmiente? 
+Aurora
+17.¿Qué libro de Louisa May Alcott ha tenido más fama, que incluso lo han hecho como película? 
+Mujercitas 
+18.¿Cuál fue el primer refresco que se llevó al espacio?
+Coca cola
+19.¿Quién escribió un diario famoso mientras se escondía de los nazis en Amsterdam? 
+Ana Frank 
+20.En Los tres cerditos, ¿de qué está hecha la casa más fuerte? 
+Ladrillos 
+21.¿Cuál fue el primer juguete que se publicitó en televisión? 
+Mr Potato 
+22.¿Alrededor de cuántas papilas gustativas tiene la lengua humana de promedio? 
+10.000 
+23.¿Cuál fue la primera película animada de largometraje que se lanzó? 
+Blanca Nieves y los siete enanitos
+24.¿Cada cuántos años se llevan a cabo los Juegos Olímpicos? 
+4
