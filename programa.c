@@ -47,17 +47,17 @@ void tablero(int tam){
 	
 	printf("\n");
 	printf("E: Entrada al tablero\n");
+	printf("O: casilla de oca\n");
+	printf("F: casilla final\n");
+	printf("La forma de moverse por el tablero es como la de un gusanito,\n");
+	printf("subiendo y bajando por las columnas hasta llegar al final\n");
 	printf("\n");
 	
 
 	for (columna=1;columna<=tam;columna++){
-    	if(columna == tam){
-    		printf("    E");
-		}else{
 			printf("    ");
 			printf("%d",columna);
 			printf(" ");
-        }
     }
     printf("\n");
     
@@ -71,9 +71,21 @@ void tablero(int tam){
 
 	for(fila=1;fila<=tam;fila++) {
          printf("\n");
-         for(columna=1;columna<=tam;columna++) {
+         for(columna=1;columna<=tam+1;columna++) {
          	if(columna==1){
-         		printf("  %d |___|",fila);
+         		printf("   %d",fila);
+             }else if(columna == 2 && fila == 1){
+             	printf("|_E_|");
+             }else if(columna == tam+1 && fila == 1){
+             	printf("|_F_|");
+			 }else if(columna % 2 == 0 && fila % 2 != 0){
+			 	printf("|_O_|");
+			 }else if(columna % 2 != 0 && fila % 2 == 0){
+			 	printf("|_O_|");
+			 }else if(columna % 2 != 0 && fila % 2 == 0){
+			 	printf("|_O_|");
+			 }else if(columna == 2){
+			 	printf("|___|");
 			 }else{
 			 	printf("|___|");
 			 }
@@ -113,6 +125,21 @@ int main (){
 		}	
 		
 	}while(tamano !='D' && tamano !='d' && tamano !='N' && tamano !='n' && tamano !='G' && tamano !='g');
+	
+	char tema;
+	do{
+		fflush(stdin); 
+		printf("Que tematica deseas para las preguntas del juego?\n"); 
+		printf(" E- Entretenimiento\n");  
+		printf(" A- Arte y literatura\n");  
+	    printf(" G- Geografia e historia\n"); 
+		scanf("%c", &tema);
+		
+	    if(tema !='E' && tema !='e' && tema !='A' && tema !='a' && tema !='G' && tema !='g'){
+			printf("Esa opcion no es valida!! Vuelve a intentarlo!!\n");
+			scanf("%c", & tema);
+		}		
+	}while(tema !='E' && tema !='e' && tema !='A' && tema !='a' && tema !='G' && tema !='g');
 
     if(tamano == 'D' || tamano == 'd'){
     	tablero(4);
