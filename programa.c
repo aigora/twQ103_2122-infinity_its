@@ -6,6 +6,7 @@
 void Banner (){
 	HANDLE hConsole = GetStdHandle( STD_OUTPUT_HANDLE );
 	printf ("Bienvenido a Infinity_ITS, esperamos que pases un gran rato y disfrutes del juego\n");
+	printf("\n");
     printf( "      (.)");color(hConsole, 6); printf("<            >");color(hConsole, 7);printf("(.)\n");
     color (hConsole, 7); 
     printf("      ||                || \n");
@@ -20,6 +21,7 @@ char menu (){
 	char opcion1; 
 		do {
 		fflush(stdin); 
+		printf("\n");
 		printf("Que desea hacer?\n"); 
 		printf("A- Ver las reglas del juego\n");  
 		printf("B- Iniciar el juego\n");  
