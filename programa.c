@@ -6,6 +6,7 @@
 void Banner (){
 	HANDLE hConsole = GetStdHandle( STD_OUTPUT_HANDLE );
 	printf ("Bienvenido a Infinity_ITS, esperamos que pases un gran rato y disfrutes del juego\n");
+	printf("\n");
     printf( "      (.)");color(hConsole, 6); printf("<            >");color(hConsole, 7);printf("(.)\n");
     color (hConsole, 7);
     printf("      ||                || \n");
@@ -19,11 +20,20 @@ void Banner (){
 char menu (){
 	char opcion1;
 		do {
+<<<<<<< HEAD
 		fflush(stdin);
 		printf("Que desea hacer?\n");
 		printf("A- Ver las reglas del juego\n");
 		printf("B- Iniciar el juego\n");
 		scanf("%c", & opcion1);
+=======
+		fflush(stdin); 
+		printf("\n");
+		printf("Que desea hacer?\n"); 
+		printf("A- Ver las reglas del juego\n");  
+		printf("B- Iniciar el juego\n");  
+		scanf("%c", & opcion1); 
+>>>>>>> cc2bf6118302c4c449e6e78788d4b48cad6ed943
 		switch (opcion1){
 			case 'A':
 			case 'a':
@@ -112,11 +122,19 @@ int main (){
 
 	char tamano;
 	do{
+<<<<<<< HEAD
 		fflush(stdin);
 		printf("Como de grande quiere el tablero?\n");
 		printf("D- Diminuto (16 casillas)\n");
 		printf("N- Normalito (25 casillas)\n");
 	    printf("G- Grandote (36 casillas)\n");
+=======
+		fflush(stdin); 
+		printf("Como de grande quiere el tablero?\n"); 
+		printf(" D- Diminuto (16 casillas)\n");  
+		printf(" N- Normalito (25 casillas)\n");  
+	    printf(" G- Grandote (36 casillas)\n"); 
+>>>>>>> cc2bf6118302c4c449e6e78788d4b48cad6ed943
 		scanf("%c", &tamano);
 
 	    if(tamano !='D' && tamano !='d' && tamano !='N' && tamano !='n' && tamano !='G' && tamano !='g'){
