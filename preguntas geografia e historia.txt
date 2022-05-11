@@ -1,24 +1,48 @@
-1.¿Cómo se apellidaban los dos exploradores que dieron la primera vuelta al mundo?    Magallanes y El cano
-2.¿Qué barco no volvió del viaje en el que Colón descubrio a América por primera vez?   Santa María 
-3.¿Cuánto duró la Guerra de los Cien Años? 116
-4.¿Quién fue el primer presidente de Estados Unidos? George Washington
-5. ¿En qué año el hombre pisó la Luna por primera vez? 1969
-6.¿ Quién fue el primer presidente de la democracia española tras el franquismo? Adolfo Suárez
-7.¿Quiénes fueron, según la leyenda, los dos hermanos fundadores de la ciudad de Roma? Rómulo y Remo
-8.¿En qué idioma están escritos los manuscritos más antiguos pertenecientes a la parte de la Biblia que hoy conocemos como Nuevo Testamento? griego antiguo
-9.¿Qué país fue llamado la Galia por los romanos? Francia 
-10. ¿Cómo se conoce a la policía italiana? Carabinieri 
-11.¿Cuánto duró la Segunda República Española? 8 años 
-12.¿Cuándo se creó la ONU? 1945
-13.¿Cuál es el río más caudaloso del mundo? Amazonas
-14. ¿Cuál es el monte más alto del mundo? Himalaya
-15. ¿Cuál es la capital de Brasil? Brasilia
-16. ¿Cuál es la lengua más hablada del mundo? chino mandarín 
-17. ¿Cuál es el país de mayor tamaño del mundo? Rusia 
-18. ¿Qué río divide en dos la ciudad de Budapest? Danubio 
-19.¿A qué país pertenece la isla de Creta? Grecia 
-20. En qué país hay más de mil quinientas variedades de salchicha Alemania 
-21. ¿Cuál es la capital de Mongolia? Ulán Bator
-22. ¿Cuál es el nombre del desierto de México? Sonora
-23. ¿Cuál es el estado más grande de los Estados Unidos? Alaska 
-24. ¿En qué país se encuentra Cracovia? Polonia 
+1. ¿Como se apellidaban los dos exploradores que dieron la primera vuelta al mundo?    
+Magallanes y El cano
+2. ¿Que barco no volvio del viaje en el que Colon descubrio a America por primera vez?   
+Santa Maria 
+3. ¿Cuánto duro la Guerra de los Cien Años? 
+116
+4. ¿Quién fue el primer presidente de Estados Unidos? 
+George Washington
+5. ¿En que año el hombre piso la Luna por primera vez? 
+1969
+6. ¿Quien fue el primer presidente de la democracia española tras el franquismo? 
+Adolfo Suarez
+7. ¿Quienes fueron, segun la leyenda, los dos hermanos fundadores de la ciudad de Roma? 
+Romulo y Remo
+8. ¿En que idioma estan escritos los manuscritos mas antiguos pertenecientes a la parte de la Biblia que hoy conocemos como Nuevo Testamento? 
+Griego antiguo
+9. ¿Que pais fue llamado la Galia por los romanos? 
+Francia 
+10. ¿Como se conoce a la policia italiana? 
+Carabinieri 
+11. ¿Cuanto duro la Segunda Republica Española? 
+8 años 
+12. ¿Cuando se creo la ONU? 
+1945
+13. ¿Cual es el rio mas caudaloso del mundo? 
+Amazonas
+14. ¿Cual es el monte mas alto del mundo? 
+Himalaya
+15. ¿Cual es la capital de Brasil? 
+Brasilia
+16. ¿Cual es la lengua mas hablada del mundo? 
+Chino mandarin 
+17. ¿Cual es el pais de mayor tamaño del mundo? 
+Rusia 
+18. ¿Que rio divide en dos la ciudad de Budapest? 
+Danubio 
+19.¿A que pais pertenece la isla de Creta? 
+Grecia 
+20. ¿En que pais hay mas de mil quinientas variedades de salchichas?
+Alemania
+21. ¿Cual es la capital de Mongolia? 
+Ulan Bator
+22. ¿Cual es el nombre del desierto de Mexico? 
+Sonora
+23. ¿Cual es el estado mas grande de los Estados Unidos? 
+Alaska 
+24. ¿En que pais se encuentra Cracovia? 
+Polonia 
