@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include <cstdlib>
 #include<ctime>
-int DadoDiminuto (int x){
+int DadoMediano (int x){
 	int i; 
 	int dado; 
 	printf("Pulse '0' para lanzar el dado\n"); 
