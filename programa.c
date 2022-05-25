@@ -102,7 +102,9 @@ int main (){
 	char opcion1; 
 	Banner(); 
 	opcion1= menu();
-	printf ("Inserte el numero de jugadores\n"); 
+	printf ("Desea jugar en pareja o solo?\n"); 
+	printf (" Pulse 1 si jugara solo\n"); 
+	printf (" Pulse 2 si jugara en pareja\n"); 
 	scanf ("%d", &n_jugadores); 
 	
 	for (i=0; i<n_jugadores; i++){
