@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include <cstdlib>
 #include<ctime>
-int DadoDiminuto (int x){
+int DadoGrande (int x){
 	int i; 
 	int dado; 
 	printf("Pulse '0' para lanzar el dado\n"); 
@@ -13,4 +13,9 @@ int DadoDiminuto (int x){
 		}
 	}
 	return dado; 
+}
+int main () {
+	int num;
+	printf("%d", DadoGrande(num));
+	return 0; 
 }
