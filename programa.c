@@ -1,6 +1,7 @@
 #include<stdio.h>
 //#include<cstdlib>
 //#include<ctime> VER SI ES NECESARIO PONERLAS 
+#include<string.h>
 #define TAM_MAX 50
 #include<windows.h>
 #define color SetConsoleTextAttribute
@@ -43,7 +44,10 @@ char menu (){
 struct TJugador {
 	char avatar[50];  
 };
-
+struct TCuestiones{
+	char pregunta[50]; 
+	char respuesta[50]; 
+};
 void tablero(int tam){
 	
 	int fila,columna;
@@ -141,8 +145,8 @@ int DadoDiminuto (int x){ //Es un dado de máximo 4 números
 }
 int main (){
 	struct TJugador jugadores[TAM_MAX]; 
-	int i, n_jugadores,x; //n_jugadores se refiere al número de jugadores
-	char opcion1; 
+	int i, n_jugadores,x, dado_elegido, suma1=0,suma2=0, turno; //n_jugadores se refiere al número de jugadores
+	char opcion1, jugador_elegido[50], jugador_no_elegido[50]; 
 	Banner(); 
 	opcion1= menu();
 	printf ("Desea jugar en pareja o solo?\n"); 
@@ -161,7 +165,7 @@ int main (){
 		printf("\n"); 
 		for (i=0; i<2; i++){
 			numero[i]= Dado(num);
-			printf("%d\n", numero[i]); 
+			printf("El resultado del dado es %d\n", numero[i]); 
 		}
 		if (numero[0]==numero[1]){
 			printf("Ambos habeis obtenido el mismo numero, volved a lanzar el dado\n"); 
@@ -170,8 +174,12 @@ int main (){
 		
 		if(numero[0]>numero[1]){ // imprimimos quien empieza segun el numero sorteo anteriormente
 			printf("%s saco el dado mas alto, por lo tanto, es el que empieza a jugar\n", jugadores[0].avatar);
+			strcpy(jugador_elegido, jugadores[0].avatar);
+			strcpy(jugador_no_elegido, jugadores[1].avatar); 
 		} else if (numero[1]>numero[0]){
-			printf("%s saco el dado mas alto,, por lo tanto, es el que empieza a jugar\n", jugadores[1].avatar);
+			printf("%s saco el dado mas alto, por lo tanto, es el que empieza a jugar\n", jugadores[1].avatar);
+			strcpy(jugador_elegido, jugadores[1].avatar); 
+			strcpy(jugador_no_elegido, jugadores[0].avatar);
 		}
 	}
 	printf("\n"); 
@@ -212,15 +220,131 @@ int main (){
 
     if(tamano == 'D' || tamano == 'd'){
     	tablero(4);
-    	DadoDiminuto(x); 
 	}if(tamano == 'N' || tamano == 'n'){
     	tablero(5);
-    	DadoMediano(x); 
 	}if(tamano == 'G' || tamano == 'g'){
-    	tablero(6);
-    	Dado(x); 
+    	tablero(6);  
     }
+    if (tema== 'A'||tema=='a'){
+    	struct TCuestiones cuestion[TAM_MAX];
+    	FILE *fichero;
+    	FILE*fichero2; 
+    	int i, contador;
+    	fichero = fopen("PREGUNTAS literatura y arte.txt", "r");
+        if (fichero == NULL) {
+            printf("Error de lectura\n");
+            return 0;
+        }
+        fichero2= fopen ("RESPUESTAS literatura y arte.txt", "r"); 
+        if (fichero2== NULL){
+        	printf("Error de lectura\n"); 
+        	return 0; 
+		}
+        i=0;
+        contador=0;
+        while (fscanf(fichero, "%s ", cuestion[i].pregunta) != EOF) {
+                printf("%s \n", cuestion[i].pregunta);
+                i++;
+                contador++;
+        } 
+		while (fscanf(fichero2, "%s ",cuestion[i].respuesta) != EOF) {
+                printf("%s \n", cuestion[i].respuesta);
+                i++;
+                contador++;
+        }
+        fclose(fichero);
+        fclose (fichero2); 
+	}
+	if (tema=='E'|| tema =='e'){
+		struct TCuestiones cuestion[TAM_MAX];
+   	 	FILE *fichero;
+   	 	FILE*fichero2; 
+   		 int i, contador;
+    	fichero = fopen("PREGUNTAS entretenimiento.txt", "r");
+		if (fichero == NULL) {
+            printf("Error de lectura\n");
+            return 0;
+        }
+        fichero2= fopen ("RESPUESTAS entretenimiento.txt", "r"); 
+        if (fichero2== NULL){
+        	printf("Error de lectura\n");
+            return 0;
+		}
+        i=0;
+        contador=0;
+        while (fscanf(fichero, "%s ", cuestion[i].pregunta) != EOF) {
+                printf("%s \n", cuestion[i].pregunta);
+                i++;
+                contador++;
+        }
+        while (fscanf(fichero2, "%s ",cuestion[i].respuesta) != EOF) {
+                printf("%s\n", cuestion[i].respuesta);
+                i++;
+                contador++;
+        }
+        fclose(fichero);
+        fclose(fichero2);
+	}
+	if (tema=='G'|| tema =='g'){
+		struct TCuestiones cuestion[TAM_MAX];
+    	FILE *fichero;
+    	FILE*fichero2; 
+    	int i, contador;
+		fichero = fopen("PREGUNTAS geografia e historia.txt", "r");
+		if (fichero == NULL) {
+                printf("Error de lectura\n");
+                return 0;
+        }
+        fichero2=fopen("RESPUESTAS geografia e historia.txt", "r"); 
+        if(fichero2==NULL){
+        	printf("Error de lectura\n");
+                return 0;
+		}
+        i=0;
+        contador=0;
+        while (fscanf(fichero, "%s", cuestion[i].pregunta) != EOF) {
+                printf("%s\n", cuestion[i].pregunta);
+                i++;
+                contador++;
+        }
+        while (fscanf(fichero2, "%s", cuestion[i].respuesta) != EOF) {
+                printf("%s\n", cuestion[i].respuesta);
+                i++;
+                contador++;
+        }
+        fclose(fichero);
+        fclose(fichero2); 
+	}
 	printf("\n"); 
+	 
+	if(tamano == 'D' || tamano == 'd'){
+    	dado_elegido= DadoDiminuto(x); 
+	}if(tamano == 'N' || tamano == 'n'){
+    	dado_elegido= DadoMediano(x); 
+	}if(tamano == 'G' || tamano == 'g'){
+    	dado_elegido=Dado(x);  
+	printf("\n"); 
+	
+	if (jugador_elegido){
+		turno=0; 
+	} if (jugador_no_elegido){
+		turno=1; 
+	}
+	if(turno==0)
+    {
+         printf("Turno jugador %s\n", jugador_elegido);
+         printf("El resultado del dado: %d\n",dado_elegido);
+        suma1+=dado_elegido; 
+        printf("Posicion %s -[%d]\n",suma1);
 
+    }
+   else if(turno==1)
+   {
+        printf("Turno jugador %s\n", jugador_no_elegido);
+        printf("El resultado del dado: %d\n",dado_elegido);
+       	suma2+=dado_elegido; 
+       printf("Posicion %s-[%d]\n",suma2);
+   }
+}
 	return 0;  
 }
