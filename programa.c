@@ -1,4 +1,6 @@
 #include<stdio.h>
+//#include<cstdlib>
+//#include<ctime> VER SI ES NECESARIO PONERLAS 
 #define TAM_MAX 50
 #include<windows.h>
 #define color SetConsoleTextAttribute
@@ -96,9 +98,50 @@ void tablero(int tam){
     printf("\n");
 }
 
+int Dado (int x){
+	int i; 
+	int dado; 
+	printf("Pulse '0' para lanzar el dado\n"); 
+	scanf("%d", &x); 
+	if (x==0){
+			srand (time(0)); 
+		for (i=0; i<7; i++){
+			dado= 1+ (rand ()%6); 
+		}
+	}
+	return dado; 
+}
+
+int DadoMediano (int x){ //Es un dado con 5 números máximo
+	int i; 
+	int dado; 
+	printf("Pulse '0' para lanzar el dado\n"); 
+	scanf("%d", &x); 
+	if (x==0){
+			srand (time(0)); 
+		for (i=0; i<7; i++){
+			dado= 1+ (rand ()%5); 
+		}
+	}
+	return dado; 
+}
+
+int DadoDiminuto (int x){ //Es un dado de máximo 4 números 
+	int i; 
+	int dado; 
+	printf("Pulse '0' para lanzar el dado\n"); 
+	scanf("%d", &x); 
+	if (x==0){
+			srand (time(0)); 
+		for (i=0; i<7; i++){
+			dado= 1+ (rand ()%4); 
+		}
+	}
+	return dado;
+}
 int main (){
 	struct TJugador jugadores[TAM_MAX]; 
-	int i, n_jugadores; //n_jugadores se refiere al número de jugadores
+	int i, n_jugadores,x; //n_jugadores se refiere al número de jugadores
 	char opcion1; 
 	Banner(); 
 	opcion1= menu();
@@ -111,7 +154,27 @@ int main (){
 		printf("Nombre del jugador %d:\n",i+1); 
 		scanf("%s", jugadores[i].avatar); 
 	} 
-	
+	 //ahora vamos a ver que jugador empieza en caso de que sean dos jugadores
+	int num, numero[1]; 
+	if (n_jugadores==2){
+	do{
+		printf("\n"); 
+		for (i=0; i<2; i++){
+			numero[i]= Dado(num);
+			printf("%d\n", numero[i]); 
+		}
+		if (numero[0]==numero[1]){
+			printf("Ambos habeis obtenido el mismo numero, volved a lanzar el dado\n"); 
+		}
+	}while (numero[0]==numero[1]); 	
+		
+		if(numero[0]>numero[1]){ // imprimimos quien empieza segun el numero sorteo anteriormente
+			printf("%s saco el dado mas alto, por lo tanto, es el que empieza a jugar\n", jugadores[0].avatar);
+		} else if (numero[1]>numero[0]){
+			printf("%s saco el dado mas alto,, por lo tanto, es el que empieza a jugar\n", jugadores[1].avatar);
+		}
+	}
+	printf("\n"); 
 	printf("El juego va a iniciar. PREPARATE PARA AVERIGUAR COMO DE LIST@ ERES!\n");
 	
 	char tamano; 
@@ -130,6 +193,8 @@ int main (){
 		
 	}while(tamano !='D' && tamano !='d' && tamano !='N' && tamano !='n' && tamano !='G' && tamano !='g');
 	
+	printf("\n"); 
+	
 	char tema;
 	do{
 		fflush(stdin); 
@@ -147,12 +212,15 @@ int main (){
 
     if(tamano == 'D' || tamano == 'd'){
     	tablero(4);
+    	DadoDiminuto(x); 
 	}if(tamano == 'N' || tamano == 'n'){
     	tablero(5);
+    	DadoMediano(x); 
 	}if(tamano == 'G' || tamano == 'g'){
     	tablero(6);
+    	Dado(x); 
     }
+	printf("\n"); 
+
 	return 0;  
 }
-
-
