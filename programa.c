@@ -20,29 +20,23 @@ void Banner (){
 char menu (){
 	char opcion1;
 		do {
-<<<<<<< HEAD
+
 		fflush(stdin);
 		printf("Que desea hacer?\n");
 		printf("A- Ver las reglas del juego\n");
 		printf("B- Iniciar el juego\n");
 		scanf("%c", & opcion1);
-=======
-		fflush(stdin); 
-		printf("\n");
-		printf("Que desea hacer?\n"); 
-		printf("A- Ver las reglas del juego\n");  
-		printf("B- Iniciar el juego\n");  
-		scanf("%c", & opcion1); 
->>>>>>> cc2bf6118302c4c449e6e78788d4b48cad6ed943
+
 		switch (opcion1){
 			case 'A':
 			case 'a':
 			fflush(stdin);
-			printf("El primer jugador registrado comienza tirando el dado, despues avanza el numero de casillas indicado por el dado. Si el jugador cae en una casilla con oca, le saldra una pregunta que debe responder. Si acierta la pregunta permanece en la casilla de oca, si por el contrario falla la pregunta, retrocede hasta donde se encontraba anteriormente. Si el jugador cae en una casilla en donde no hay una oca, permanece en esa casilla. El primer jugador en llegar a la casilla final gana el juego y este mismo finaliza.\n");
+			printf("El primer jugador registrado comienza tirando el dado, despues avanza el numero de casillas indicado por el dado.\nSi el jugador cae en una casilla con oca, le saldra una pregunta que debe responder.\nSi acierta la pregunta permanece en la casilla de oca, si por el contrario falla la pregunta,\nretrocede hasta donde se encontraba anteriormente.\nSi el jugador cae en una casilla en donde no hay una oca, permanece en esa casilla.\nEl primer jugador en llegar a la casilla final gana el juego y este mismo finaliza.\n");
+		//ver porque no se tabulan las frases 
 			break;
 		}
 	}
-	while (opcion1!='B' && opcion1!='b'); //VER COMO HACER PARA QUE CON b NOS SALGA TAMBIEN
+	while (opcion1!='B'&& opcion1!='b'); 
 	return opcion1;
 }
 
@@ -53,7 +47,7 @@ struct TJugador {
 void tablero(int tam){
 
 	int fila,columna;
-     int matriz[tam][tam];
+    int matriz[tam][tam];
 
 	printf("\n");
 	printf("E: Entrada al tablero\n");
@@ -118,23 +112,23 @@ int main (){
 		scanf("%s", jugadores[i].avatar);
 	}
 
-	printf("El juego va a iniciar. PREPARATE PARA AVERIGUAR COMO DE LIST@ ERES!\n");
+	printf("El juego va a iniciar.\nPREPARATE PARA AVERIGUAR COMO DE LIST@ ERES!\n");
 
 	char tamano;
 	do{
-<<<<<<< HEAD
+//<<<<<<< HEAD
 		fflush(stdin);
 		printf("Como de grande quiere el tablero?\n");
 		printf("D- Diminuto (16 casillas)\n");
 		printf("N- Normalito (25 casillas)\n");
 	    printf("G- Grandote (36 casillas)\n");
-=======
-		fflush(stdin); 
+//======= supuestamente debemos quitarlo porque esta repetido
+		/*fflush(stdin); 
 		printf("Como de grande quiere el tablero?\n"); 
 		printf(" D- Diminuto (16 casillas)\n");  
 		printf(" N- Normalito (25 casillas)\n");  
 	    printf(" G- Grandote (36 casillas)\n"); 
->>>>>>> cc2bf6118302c4c449e6e78788d4b48cad6ed943
+//>>>>>>> cc2bf6118302c4c449e6e78788d4b48cad6ed943*/
 		scanf("%c", &tamano);
 
 	    if(tamano !='D' && tamano !='d' && tamano !='N' && tamano !='n' && tamano !='G' && tamano !='g'){
