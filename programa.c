@@ -143,10 +143,104 @@ int DadoDiminuto (int x){ //Es un dado de máximo 4 números
 	}
 	return dado;
 }
+
+void Literatura (){
+	struct TCuestiones cuestion[TAM_MAX];
+    	FILE *fichero;
+    	FILE*fichero2; 
+    	int i, contador;
+    	fichero = fopen("PREGUNTAS literatura y arte.txt", "r");
+        if (fichero == NULL) {
+            printf("Error de lectura\n");
+            return 0;
+        }
+        fichero2= fopen ("RESPUESTAS literatura y arte.txt", "r"); 
+        if (fichero2== NULL){
+        	printf("Error de lectura\n"); 
+        	return 0; 
+		}
+        i=0;
+        contador=0;
+        while (fscanf(fichero, "%s ", cuestion[i].pregunta) != EOF) {
+                printf("%s \n", cuestion[i].pregunta);
+                i++;
+                contador++;
+        } 
+		while (fscanf(fichero2, "%s ",cuestion[i].respuesta) != EOF) {
+                printf("%s \n", cuestion[i].respuesta);
+                i++;
+                contador++;
+        }
+        fclose(fichero);
+        fclose (fichero2); 
+}
+
+void Entretenimiento(){
+	struct TCuestiones cuestion[TAM_MAX];
+   	 	FILE *fichero;
+   	 	FILE*fichero2; 
+   		 int i, contador;
+    	fichero = fopen("PREGUNTAS entretenimiento.txt", "r");
+		if (fichero == NULL) {
+            printf("Error de lectura\n");
+            return 0;
+        }
+        fichero2= fopen ("RESPUESTAS entretenimiento.txt", "r"); 
+        if (fichero2== NULL){
+        	printf("Error de lectura\n");
+            return 0;
+		}
+        i=0;
+        contador=0;
+        while (fscanf(fichero, "%s ", cuestion[i].pregunta) != EOF) {
+                printf("%s \n", cuestion[i].pregunta);
+                i++;
+                contador++;
+        }
+        while (fscanf(fichero2, "%s ",cuestion[i].respuesta) != EOF) {
+                printf("%s\n", cuestion[i].respuesta);
+                i++;
+                contador++;
+        }
+        fclose(fichero);
+        fclose(fichero2);
+}
+
+void Geografia(){
+	struct TCuestiones cuestion[TAM_MAX];
+    	FILE *fichero;
+    	FILE*fichero2; 
+    	int i, contador;
+		fichero = fopen("PREGUNTAS geografia e historia.txt", "r");
+		if (fichero == NULL) {
+                printf("Error de lectura\n");
+                return 0;
+        }
+        fichero2=fopen("RESPUESTAS geografia e historia.txt", "r"); 
+        if(fichero2==NULL){
+        	printf("Error de lectura\n");
+                return 0;
+		}
+        i=0;
+        contador=0;
+        while (fscanf(fichero, "%s", cuestion[i].pregunta) != EOF) {
+                printf("%s\n", cuestion[i].pregunta);
+                i++;
+                contador++;
+        }
+        while (fscanf(fichero2, "%s", cuestion[i].respuesta) != EOF) {
+                printf("%s\n", cuestion[i].respuesta);
+                i++;
+                contador++;
+        }
+        fclose(fichero);
+        fclose(fichero2); 
+}
+    
 int main (){
 	struct TJugador jugadores[TAM_MAX]; 
 	int i, n_jugadores,x, dado_elegido, suma1=0,suma2=0, turno; //n_jugadores se refiere al número de jugadores
-	char opcion1, jugador_elegido[50], jugador_no_elegido[50]; 
+	char opcion1, jugador_elegido[50], jugador_no_elegido[50], tema_elegido[50]; 
 	Banner(); 
 	opcion1= menu();
 	printf ("Desea jugar en pareja o solo?\n"); 
@@ -226,94 +320,13 @@ int main (){
     	tablero(6);  
     }
     if (tema== 'A'||tema=='a'){
-    	struct TCuestiones cuestion[TAM_MAX];
-    	FILE *fichero;
-    	FILE*fichero2; 
-    	int i, contador;
-    	fichero = fopen("PREGUNTAS literatura y arte.txt", "r");
-        if (fichero == NULL) {
-            printf("Error de lectura\n");
-            return 0;
-        }
-        fichero2= fopen ("RESPUESTAS literatura y arte.txt", "r"); 
-        if (fichero2== NULL){
-        	printf("Error de lectura\n"); 
-        	return 0; 
-		}
-        i=0;
-        contador=0;
-        while (fscanf(fichero, "%s ", cuestion[i].pregunta) != EOF) {
-                printf("%s \n", cuestion[i].pregunta);
-                i++;
-                contador++;
-        } 
-		while (fscanf(fichero2, "%s ",cuestion[i].respuesta) != EOF) {
-                printf("%s \n", cuestion[i].respuesta);
-                i++;
-                contador++;
-        }
-        fclose(fichero);
-        fclose (fichero2); 
+    	tema_elegido== Literatura; 
 	}
 	if (tema=='E'|| tema =='e'){
-		struct TCuestiones cuestion[TAM_MAX];
-   	 	FILE *fichero;
-   	 	FILE*fichero2; 
-   		 int i, contador;
-    	fichero = fopen("PREGUNTAS entretenimiento.txt", "r");
-		if (fichero == NULL) {
-            printf("Error de lectura\n");
-            return 0;
-        }
-        fichero2= fopen ("RESPUESTAS entretenimiento.txt", "r"); 
-        if (fichero2== NULL){
-        	printf("Error de lectura\n");
-            return 0;
-		}
-        i=0;
-        contador=0;
-        while (fscanf(fichero, "%s ", cuestion[i].pregunta) != EOF) {
-                printf("%s \n", cuestion[i].pregunta);
-                i++;
-                contador++;
-        }
-        while (fscanf(fichero2, "%s ",cuestion[i].respuesta) != EOF) {
-                printf("%s\n", cuestion[i].respuesta);
-                i++;
-                contador++;
-        }
-        fclose(fichero);
-        fclose(fichero2);
+		tema_elegido==Entretenimiento; 
 	}
 	if (tema=='G'|| tema =='g'){
-		struct TCuestiones cuestion[TAM_MAX];
-    	FILE *fichero;
-    	FILE*fichero2; 
-    	int i, contador;
-		fichero = fopen("PREGUNTAS geografia e historia.txt", "r");
-		if (fichero == NULL) {
-                printf("Error de lectura\n");
-                return 0;
-        }
-        fichero2=fopen("RESPUESTAS geografia e historia.txt", "r"); 
-        if(fichero2==NULL){
-        	printf("Error de lectura\n");
-                return 0;
-		}
-        i=0;
-        contador=0;
-        while (fscanf(fichero, "%s", cuestion[i].pregunta) != EOF) {
-                printf("%s\n", cuestion[i].pregunta);
-                i++;
-                contador++;
-        }
-        while (fscanf(fichero2, "%s", cuestion[i].respuesta) != EOF) {
-                printf("%s\n", cuestion[i].respuesta);
-                i++;
-                contador++;
-        }
-        fclose(fichero);
-        fclose(fichero2); 
+		tema_elegido==Geografia; 
 	}
 	printf("\n"); 
 	 
@@ -330,21 +343,50 @@ int main (){
 	} if (jugador_no_elegido){
 		turno=1; 
 	}
-	if(turno==0)
-    {
-         printf("Turno jugador %s\n", jugador_elegido);
-         printf("El resultado del dado: %d\n",dado_elegido);
+	if(turno==0){
+        printf("Turno jugador %s\n", jugador_elegido);
+        printf("El resultado del dado: %d\n",dado_elegido);
         suma1+=dado_elegido; 
         printf("Posicion %s -[%d]\n",suma1);
-
-    }
-   else if(turno==1)
-   {
+        if(tamano=='D'|| tamano=='d'){
+			if (tablero[1][3]==1|| tablero[2][2]==1||tablero[2][4]==1||tablero[3][1]==1||tablero[3][3]==1||tablero[4][2]==1||tablero[4][4]==1){
+		printf("Jugador %c--> Has caido en la oca, acierta la siguiente pregunta para continuar avanzando", jugadores[0]avatar);}
+		//hay que poner la funcion de las preguntas y respuestas
+		}
+		if(tamano=='M'|| tamano=='m'){
+			if (tablero[1][3]==1|| tablero[1][5]==1||tablero[2][2]==1||tablero[2][4]==1||tablero[3][1]==1||tablero[3][3]==1||tablero[3][4]==1||tablero[4][2]==1||tablero[4][4]==1||tablero[5][3]==1||tablero[5][5]==1){
+			printf("Jugador %c--> Has caido en la oca, acierta la siguiente pregunta para continuar avanzando", jugadores[0].avatar);
+			//hay que poner la funcion de las preguntas y respuestas 
+			}
+		}
+		if(tamano=='G'|| tamano=='g'){
+			if (tablero[1][3]==1||tablero[1][5]==1||tablero[2][2]==1||tablero[2][4]==1||tablero[2][6]==1||tablero[3][1]==1||tablero[3][3]==1||tablero[3][5]==1||tablero[4][2]==1||tablero[4][4]==1||tablero[4][6]==1||tablero[5][1]==1||tablero[5][3]==1||tablero[5][5]==1||tablero[6][2]==1||tablero[6][4]==1||tablero[6][6]==1){
+			printf("Jugador %c--> Has caido en la oca, acierta la siguiente pregunta para continuar avanzando", jugadores[0].avatar); 
+			//hay que poner la funcion de las preguntas y respuestas 
+		}
+		}
+		else if(turno==1){
         printf("Turno jugador %s\n", jugador_no_elegido);
         printf("El resultado del dado: %d\n",dado_elegido);
-       	suma2+=dado_elegido; 
-       printf("Posicion %s-[%d]\n",suma2);
-   }
-}
+    	suma2+=dado_elegido; 
+    	printf("Posicion %s-[%d]\n",suma2);
+   		}
+   		if(tamano=='D'|| tamano=='d'){
+			if (tablero[1][3]==2|| tablero[2][2]==2|||tablero[2][4]==2||tablero[3][1]==2||tablero[3][3]==2||tablero[4][2]==2||tablero[4][4]==2){
+		printf("Jugador %c--> Has caido en la oca, acierta la siguiente pregunta para continuar avanzando", jugadores[0]avatar);}
+		//hay que poner la funcion de las preguntas y respuestas
+		}
+		if(tamano=='M'|| tamano=='m'){
+			if (tablero[1][3]==2|| tablero[1][5]==2||tablero[2][2]==2||tablero[2][4]==2||tablero[3][1]==2||tablero[3][3]==2||tablero[3][4]==2||tablero[4][2]==2||tablero[4][4]==2||tablero[5][3]==2||tablero[5][5]==2){
+			printf("Jugador %c--> Has caido en la oca, acierta la siguiente pregunta para continuar avanzando", jugadores[0].avatar);
+			//hay que poner la funcion de las preguntas y respuestas 
+			}
+		}
+		if(tamano=='G'|| tamano=='g'){
+			if (tablero[1][3]==2||tablero[1][5]==2||tablero[2][2]==2||tablero[2][4]==2||tablero[2][6]==2||tablero[3][1]==2||tablero[3][3]==2||tablero[3][5]==2||tablero[4][2]==2||tablero[4][4]==2||tablero[4][6]==2||tablero[5][1]==2||tablero[5][3]==2||tablero[5][5]==2||tablero[6][2]==2||tablero[6][4]==2||tablero[6][6]==2){
+			printf("Jugador %c--> Has caido en la oca, acierta la siguiente pregunta para continuar avanzando", jugadores[0].avatar); 
+			//hay que poner la funcion de las preguntas y respuestas 
+		}
+	}
 	return 0;  
 }
