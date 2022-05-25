@@ -45,7 +45,7 @@ struct TJugador {
 void tablero(int tam){
 	
 	int fila,columna;
-     int matriz[tam][tam];
+    int matriz[tam][tam];
 	
 	printf("\n");
 	printf("E: Entrada al tablero\n");
@@ -71,7 +71,29 @@ void tablero(int tam){
         }
     }
 
-	for(fila=1;fila<=tam;fila++) {
+    if(tam == 5){
+    	for(fila=1;fila<=tam;fila++) {
+         printf("\n");
+         for(columna=1;columna<=tam+1;columna++) {
+         	if(columna==1){
+         		printf("   %d",fila);
+             }else if(columna == 2 && fila == 1){
+             	printf("|_E_|");
+             }else if(columna == tam+1 && fila == tam){
+             	printf("|_F_|");
+			 }else if(columna % 2 == 0 && fila % 2 != 0){
+			 	printf("|_O_|");
+			 }else if(columna % 2 != 0 && fila % 2 == 0){
+			 	printf("|_O_|");
+			 }else if(columna == 2){
+			 	printf("|___|");
+			 }else{
+			 	printf("|___|");
+			    }  
+		    }
+        }
+	}else{
+		for(fila=1;fila<=tam;fila++) {
          printf("\n");
          for(columna=1;columna<=tam+1;columna++) {
          	if(columna==1){
@@ -84,15 +106,14 @@ void tablero(int tam){
 			 	printf("|_O_|");
 			 }else if(columna % 2 != 0 && fila % 2 == 0){
 			 	printf("|_O_|");
-			 }else if(columna % 2 != 0 && fila % 2 == 0){
-			 	printf("|_O_|");
 			 }else if(columna == 2){
 			 	printf("|___|");
 			 }else{
 			 	printf("|___|");
-			 }
-		}
-    }
+			    }
+		    }
+        }
+   }
     printf("\n");
 }
 
@@ -152,7 +173,8 @@ int main (){
 	}if(tamano == 'G' || tamano == 'g'){
     	tablero(6);
     }
-	return 0;  
+
+	return 0;  	
 }
 
 
