@@ -349,6 +349,29 @@ int main (){
         suma1+=dado_elegido; 
         printf("Posicion %s -[%d]\n",suma1);
         if(tamano=='D'|| tamano=='d'){
+			if (tablero[1][3]==0|| tablero[2][2]==0||tablero[2][4]==0||tablero[3][1]==0||tablero[3][3]==0||tablero[4][2]==0||tablero[4][4]==0){
+		printf("Jugador %c--> Has caido en la oca, acierta la siguiente pregunta para continuar avanzando", jugadores[0]avatar);}
+		//hay que poner la funcion de las preguntas y respuestas
+		}
+		if(tamano=='M'|| tamano=='m'){
+			if (tablero[1][3]==0|| tablero[1][5]==0||tablero[2][2]==0||tablero[2][4]==0||tablero[3][1]==0||tablero[3][3]==0||tablero[3][4]==0||tablero[4][2]==0||tablero[4][4]==0||tablero[5][3]==0||tablero[5][5]==0){
+			printf("Jugador %c--> Has caido en la oca, acierta la siguiente pregunta para continuar avanzando", jugadores[0].avatar);
+			//hay que poner la funcion de las preguntas y respuestas 
+			}
+		}
+		if(tamano=='G'|| tamano=='g'){
+			if (tablero[1][3]==0||tablero[1][5]==0||tablero[2][2]==0||tablero[2][4]==0||tablero[2][6]==0||tablero[3][1]==0||tablero[3][3]==0||tablero[3][5]==0||tablero[4][2]==0||tablero[4][4]==0||tablero[4][6]==0||tablero[5][1]==0||tablero[5][3]==0||tablero[5][5]==0||tablero[6][2]==0||tablero[6][4]==0||tablero[6][6]==0){
+			printf("Jugador %c--> Has caido en la oca, acierta la siguiente pregunta para continuar avanzando", jugadores[0].avatar); 
+			//hay que poner la funcion de las preguntas y respuestas 
+		}
+		}
+		else if(turno==1){
+        printf("Turno jugador %s\n", jugador_no_elegido);
+        printf("El resultado del dado: %d\n",dado_elegido);
+    	suma2+=dado_elegido; 
+    	printf("Posicion %s-[%d]\n",suma2);
+   		}
+   		if(tamano=='D'|| tamano=='d'){
 			if (tablero[1][3]==1|| tablero[2][2]==1||tablero[2][4]==1||tablero[3][1]==1||tablero[3][3]==1||tablero[4][2]==1||tablero[4][4]==1){
 		printf("Jugador %c--> Has caido en la oca, acierta la siguiente pregunta para continuar avanzando", jugadores[0]avatar);}
 		//hay que poner la funcion de las preguntas y respuestas
@@ -361,29 +384,6 @@ int main (){
 		}
 		if(tamano=='G'|| tamano=='g'){
 			if (tablero[1][3]==1||tablero[1][5]==1||tablero[2][2]==1||tablero[2][4]==1||tablero[2][6]==1||tablero[3][1]==1||tablero[3][3]==1||tablero[3][5]==1||tablero[4][2]==1||tablero[4][4]==1||tablero[4][6]==1||tablero[5][1]==1||tablero[5][3]==1||tablero[5][5]==1||tablero[6][2]==1||tablero[6][4]==1||tablero[6][6]==1){
-			printf("Jugador %c--> Has caido en la oca, acierta la siguiente pregunta para continuar avanzando", jugadores[0].avatar); 
-			//hay que poner la funcion de las preguntas y respuestas 
-		}
-		}
-		else if(turno==1){
-        printf("Turno jugador %s\n", jugador_no_elegido);
-        printf("El resultado del dado: %d\n",dado_elegido);
-    	suma2+=dado_elegido; 
-    	printf("Posicion %s-[%d]\n",suma2);
-   		}
-   		if(tamano=='D'|| tamano=='d'){
-			if (tablero[1][3]==2|| tablero[2][2]==2|||tablero[2][4]==2||tablero[3][1]==2||tablero[3][3]==2||tablero[4][2]==2||tablero[4][4]==2){
-		printf("Jugador %c--> Has caido en la oca, acierta la siguiente pregunta para continuar avanzando", jugadores[0]avatar);}
-		//hay que poner la funcion de las preguntas y respuestas
-		}
-		if(tamano=='M'|| tamano=='m'){
-			if (tablero[1][3]==2|| tablero[1][5]==2||tablero[2][2]==2||tablero[2][4]==2||tablero[3][1]==2||tablero[3][3]==2||tablero[3][4]==2||tablero[4][2]==2||tablero[4][4]==2||tablero[5][3]==2||tablero[5][5]==2){
-			printf("Jugador %c--> Has caido en la oca, acierta la siguiente pregunta para continuar avanzando", jugadores[0].avatar);
-			//hay que poner la funcion de las preguntas y respuestas 
-			}
-		}
-		if(tamano=='G'|| tamano=='g'){
-			if (tablero[1][3]==2||tablero[1][5]==2||tablero[2][2]==2||tablero[2][4]==2||tablero[2][6]==2||tablero[3][1]==2||tablero[3][3]==2||tablero[3][5]==2||tablero[4][2]==2||tablero[4][4]==2||tablero[4][6]==2||tablero[5][1]==2||tablero[5][3]==2||tablero[5][5]==2||tablero[6][2]==2||tablero[6][4]==2||tablero[6][6]==2){
 			printf("Jugador %c--> Has caido en la oca, acierta la siguiente pregunta para continuar avanzando", jugadores[0].avatar); 
 			//hay que poner la funcion de las preguntas y respuestas 
 		}
