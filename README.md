@@ -12,7 +12,13 @@ Sofía Sánchez Solla (sofia.sanchez.solla), Irene Rico Martín (irene.rico), Te
 
 -Se utilizarán seis ficheros (archivo.txt) de lectura, tres de ellos con las preguntas de cada temática (hay 24 de cada una), y otros tres para sus correspondientes respuestas.
 
+<<<<<<< HEAD
 -Se describen distintas funciones: para el banner, menú de opciones, tablero, dados, y para las preguntas.
+=======
+
+-Se describen distintas funciones: para el banner, menú de opciones, tablero, dados, y para las preguntas.
+
+>>>>>>> bef106b3fea25dffbb6dd5ae77a5dde689b7535e
 
 -Utilización de vectores de estructuras para agrupar los jugadores (su avatar, es decir, nombre), y otra estructura para las respuestas a las preguntas.
 
