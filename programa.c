@@ -1,6 +1,4 @@
 #include<stdio.h>
-//#include<cstdlib>
-//#include<ctime> VER SI ES NECESARIO PONERLAS 
 #include<string.h>
 #define TAM_MAX 50
 #include<windows.h>
