@@ -34,8 +34,10 @@ char menu (){
 			printf("-SOLO UN JUGADOR:\n");
 			printf(" Una vez el jugador este registrado y haya elegido la tematica y el tamano del tablero\n ");
 			printf("comenzara tirando el dado. Si no cae en oca permanecera en ese lugar, si cae en una oca\n ");
-			printf("el jugador debera responder una pregunta. En caso de que acierte la pregunta permanecera en \n ");
-			printf("la posicion de la oca, si falla retrocedera tres casillas. Este proceso será igual hasta que \n ");
+			printf("el jugador debera responder una pregunta, la cual debera ser elegida del 1 al 24.\n ");
+			printf("No se puede elegir un numero que se haya elegido anteriormente, NO HAGAS TRAMPAS!!!\n ");
+			printf("En caso de que acierte la pregunta permanecera en la posicion de la oca,\n ");
+			printf("si falla retrocedera tres casillas. Este proceso será igual hasta que \n ");
 			printf("el jugador llegue a la ultima casilla del tablero. \n ");
 			printf("\n");
 			printf("-EN PAREJAS\n");
