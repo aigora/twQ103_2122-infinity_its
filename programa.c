@@ -31,7 +31,18 @@ char menu (){
 			case 'A': 
 			case 'a': 
 			fflush(stdin); 
-			printf("El primer jugador registrado comienza tirando el dado, despues avanza el numero de casillas indicado por el dado. Si el jugador cae en una casilla con oca, le saldra una pregunta que debe responder. Si acierta la pregunta permanece en la casilla de oca, si por el contrario falla la pregunta, retrocede hasta donde se encontraba anteriormente. Si el jugador cae en una casilla en donde no hay una oca, permanece en esa casilla. El primer jugador en llegar a la casilla final gana el juego y este mismo finaliza.\n");
+			printf("-SOLO UN JUGADOR:\n");
+			printf(" Una vez el jugador este registrado y haya elegido la tematica y el tamano del tablero\n ");
+			printf("comenzara tirando el dado. Si no cae en oca permanecera en ese lugar, si cae en una oca\n ");
+			printf("el jugador debera responder una pregunta. En caso de que acierte la pregunta permanecera en \n ");
+			printf("la posicion de la oca, si falla retrocedera tres casillas. Este proceso será igual hasta que \n ");
+			printf("el jugador llegue a la ultima casilla del tablero. \n ");
+			printf("\n");
+			printf("-EN PAREJAS\n");
+			printf(" Los jugadores se registraran y elegiran el tablero, tal y como se hace para solo un jugador.\n ");
+			printf("El procedimiento del juevo es el mismo que cuando solo juega una persona, ahora el primero en llegar\n ");
+			printf("a la ultima casilla del tablero gana.\n ");
+			
 			break; 
 		}
 	} 
