@@ -20,5 +20,5 @@ Sofía Sánchez Solla (sofia.sanchez.solla), Irene Rico Martín (irene.rico), Te
 -Utilización de vectores de estructuras para agrupar los jugadores (su avatar, es decir, nombre), y las cuestiones con su pregunta y respuesta.
 
 
--Uso de un contador de puntos  para que el usuario sepa en que casilla del tablero se encuentra a lo largo de la partida.
+-Uso de un contador de puntos para que el usuario sepa en que casilla del tablero se encuentra a lo largo de la partida.
 
