@@ -21,4 +21,3 @@ Sofía Sánchez Solla (sofia.sanchez.solla), Irene Rico Martín (irene.rico), Te
 
 
 -Uso de un contador de puntos para que el usuario sepa en que casilla del tablero se encuentra a lo largo de la partida.
-
