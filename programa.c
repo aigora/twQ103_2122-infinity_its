@@ -25,7 +25,8 @@ char menu (){
 		printf("\n");
 		printf("Que desea hacer?\n"); 
 		printf("A- Ver las reglas del juego\n");  
-		printf("B- Iniciar el juego\n");  
+		printf("B- Iniciar el juego\n");
+		printf("C- Salir del juego\n");   
 		scanf("%c", & opcion1); 
 		switch (opcion1){
 			case 'A': 
@@ -48,7 +49,7 @@ char menu (){
 			break; 
 		}
 	} 
-	while (opcion1!='B' && opcion1!='b'); //VER COMO HACER PARA QUE CON b NOS SALGA TAMBIEN 
+	while (opcion1!='B' && opcion1!='b' && opcion1!='C' && opcion1!='c' );
 	return opcion1; 
 }
 
@@ -280,10 +281,10 @@ int pregunta(char tema, int suma){
         scanf("%s",solucion);
         
         if(strcmp(solucion,resp[x].respuesta) == 0){
-        	printf("ENHORABUENA!! has acetardo!! tu puntucion permanece como %d :)\n", suma);
+        	printf("ENHORABUENA!! has acertado!! tu puntucion permanece como %d :)\n", suma);
 		}else{
 			suma = suma - 3;
-			printf("Lo sentimos, has fallado, restrocedes tres casillas, ahora su puntuacion es %d :(\n",suma);
+			printf("Lo sentimos, has fallado, retrocedes tres casillas, ahora su puntuacion es %d :(\n",suma);
 		}
         
         fclose(entrada);
@@ -332,10 +333,10 @@ int pregunta(char tema, int suma){
         scanf("%s",solucion);
         
         if(strcmp(solucion,resp[x].respuesta) == 0){
-        	printf("ENHORABUENA!! has acetardo!! tu puntucion permanece como %d :)\n", suma);
+        	printf("ENHORABUENA!! has acertado!! tu puntucion permanece como %d :)\n", suma);
 		}else{
 			suma = suma - 3;
-			printf("Lo sentimos, has fallado, restrocedes tres casillas, ahora su puntuacion es %d :(\n",suma);
+			printf("Lo sentimos, has fallado, retrocedes tres casillas, ahora su puntuacion es %d :(\n",suma);
 		}
 		
         fclose(entrada);
@@ -383,10 +384,10 @@ int pregunta(char tema, int suma){
         scanf("%s",solucion);
         
         if(strcmp(solucion,resp[x].respuesta) == 0){
-        	printf("ENHORABUENA!! has acetardo!! tu puntucion permanece como %d :)\n", suma);
+        	printf("ENHORABUENA!! has acertado!! tu puntucion permanece como %d :)\n", suma);
 		}else{
 			suma = suma - 3;
-			printf("Lo sentimos, has fallado, restrocedes tres casillas, ahora su puntuacion es %d :(\n",suma);
+			printf("Lo sentimos, has fallado, retrocedes tres casillas, ahora su puntuacion es %d :(\n",suma);
 		}
 		
         fclose(entrada);
@@ -398,12 +399,18 @@ int pregunta(char tema, int suma){
     
 int main (void){
 	struct TJugador jugadores[TAM_MAX]; 
-	int i, n_jugadores,x, dado_elegido, suma1=0,suma2=0, turno, tam, num; //n_jugadores se refiere al número de jugadores
+	int i, n_jugadores,x, dado_elegido, suma1=0,suma2=0, turno, tam, num, encontrado; //n_jugadores se refiere al número de jugadores
 	char opcion1, jugador_elegido[50], jugador_no_elegido[50], tema_elegido[50], ganador[50]; 
-	int fila, columna, matriz[100][100];
-	Banner(); 
+	int fila, columna, matriz[100][100]; 
+	
+	do{
+		
+	printf("\n");
+	Banner();	
 	opcion1= menu();
 	
+	if (opcion1 == 'B' || opcion1 == 'b'){
+		
 	do{
 		printf ("Desea jugar en pareja o solo?\n"); 
 	    printf (" Pulse 1 si jugara solo\n"); 
@@ -497,7 +504,8 @@ int main (void){
 	
 	if(n_jugadores == 2){
 		
-	
+	suma1=0;
+	suma2=0;
 	do{	 //Realizamos el bucle para que el turno de los jugadores vaya cambiando alo largo del juego
 	    printf("\n");	
 		printf("--> Turno de %s\n",jugador_elegido);
@@ -537,13 +545,16 @@ int main (void){
 		    }
 		}
 	    //Tenemos que ver si la suma de los jugadores es igual o mayor al tamaño del tablero para ver quien ha ganado
-	    if(suma1>=tam){
+	    encontrado=0;
+		if(suma1>=tam){
 	    	strcpy(ganador,jugador_elegido);
 	    	printf("Enhorabuena!!! %s has llegado al final, eres el ganad@r\n",ganador);
+	    	encontrado=1;
 	    	break;
 		}else if(suma2>=tam){
 			strcpy(ganador,jugador_no_elegido);
 			printf("Enhorabuena!!! %s has llegado al final, eres el ganad@r\n",ganador);
+			encontrado=1;
 			break;
 		}
 		
@@ -583,13 +594,16 @@ int main (void){
 		    }
 	    }
 	    //Tenemos que ver si la suma de los jugadores es igual o mayor al tamaño del tablero para ver quien ha ganado 
+	    encontrado=0;
 	    if(suma1>=tam){
 	    	strcpy(ganador,jugador_elegido);
 	    	printf("Enhorabuena!!! %s has llegado al final, eres el ganad@r\n",ganador);
+	    	encontrado=1;
 	    	break;
 		}else if(suma2>=tam){
 			strcpy(ganador,jugador_no_elegido);
 			printf("Enhorabuena!!! %s has llegado al final, eres el ganad@r\n",ganador);
+			encontrado=1;
 			break;
 		}
 		
@@ -597,7 +611,7 @@ int main (void){
 	
     }else if(n_jugadores == 1){
     	
-	
+	suma1=0;
 	do{ 
 		printf("\n"); 	
 		printf("--> Turno de %s\n",jugadores[0].avatar);
@@ -615,7 +629,6 @@ int main (void){
 		     tam=36; 
         }
          
-
 	    suma1 = suma1 + dado_elegido;
 	    printf("El resultado del dado es %d y lleva una suma de puntos %d\n", dado_elegido,suma1);
 	    //Lo utilizamos para ver cuando el jugador ha caido en la oca
@@ -639,15 +652,24 @@ int main (void){
 		}
 		
 		//Tenemos que ver si la suma del  jugador es igual o mayor al tamaño del tablero para ver si ha ganado 
+		encontrado=0;
 	    if(suma1>=tam){
 	    	strcpy(ganador,jugadores[0].avatar);
 	    	printf("Enhorabuena!!! %s has llegado al final, eres el ganad@r\n", ganador);
+	    	encontrado=1;
 	    	break;
 		}
 		
 	}while(suma1<=tam); 
 	
     }
+    
+    }else{
+    	printf("Hasta otra!!!");
+    	break;
+	}
+    
+    }while(encontrado == 1);
 	
 	
 	
