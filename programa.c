@@ -6,7 +6,7 @@
 
 void Banner (){
 	HANDLE hConsole = GetStdHandle( STD_OUTPUT_HANDLE );
-	printf ("Bienvenido a Infinity_ITS, esperamos que pases un gran rato y disfrutes del juego\n");
+	printf ("   Bienvenido a Infinity_ITS, esperamos que pases un gran rato y disfrutes del juego\n");
 	printf("\n");
     printf( "      (.)");color(hConsole, 6); printf("<            >");color(hConsole, 7);printf("(.)\n");
     color (hConsole, 7); 
@@ -23,28 +23,29 @@ char menu (){
 		do {
 		fflush(stdin); 
 		printf("\n");
-		printf("Que desea hacer?\n"); 
-		printf("A- Ver las reglas del juego\n");  
-		printf("B- Iniciar el juego\n");
-		printf("C- Salir del juego\n");   
+		printf(" Que desea hacer?\n"); 
+		printf("  A- Ver las reglas del juego\n");  
+		printf("  B- Iniciar el juego\n");
+		printf("  C- Salir del juego\n");   
 		scanf("%c", & opcion1); 
+		printf("\n");
 		switch (opcion1){
 			case 'A': 
 			case 'a': 
 			fflush(stdin); 
-			printf("-SOLO UN JUGADOR:\n");
-			printf(" Una vez el jugador este registrado y haya elegido la tematica y el tamano del tablero\n ");
-			printf("comenzara tirando el dado. Si no cae en oca permanecera en ese lugar, si cae en una oca\n ");
-			printf("el jugador debera responder una pregunta, la cual debera ser elegida del 1 al 24.\n ");
-			printf("No se puede elegir un numero que se haya elegido anteriormente, NO HAGAS TRAMPAS!!!\n ");
-			printf("En caso de que acierte la pregunta permanecera en la posicion de la oca,\n ");
-			printf("si falla retrocedera tres casillas. Este proceso será igual hasta que \n ");
-			printf("el jugador llegue a la ultima casilla del tablero. \n ");
+			printf(" -SOLO UN JUGADOR:\n");
+			printf("   Una vez el jugador este registrado y haya elegido la tematica y el tamano del tablero\n ");
+			printf("   comenzara tirando el dado. Si no cae en oca permanecera en ese lugar, si cae en una oca\n ");
+			printf("   el jugador debera responder una pregunta, la cual debera ser elegida del 1 al 24.\n ");
+			printf("   No se puede elegir un numero que se haya elegido anteriormente, NO HAGAS TRAMPAS!!!\n ");
+			printf("   En caso de que acierte la pregunta permanecera en la posicion de la oca,\n ");
+			printf("   si falla retrocedera tres casillas. Este proceso será igual hasta que \n ");
+			printf("   el jugador llegue a la ultima casilla del tablero. \n ");
 			printf("\n");
-			printf("-EN PAREJAS\n");
-			printf(" Los jugadores se registraran y elegiran el tablero, tal y como se hace para solo un jugador.\n ");
-			printf("El procedimiento del juevo es el mismo que cuando solo juega una persona, ahora el primero en llegar\n ");
-			printf("a la ultima casilla del tablero gana.\n ");
+			printf(" -EN PAREJAS\n");
+			printf("   Los jugadores se registraran y elegiran el tablero, tal y como se hace para solo un jugador.\n ");
+			printf("   El procedimiento del juevo es el mismo que cuando solo juega una persona, ahora el primero en llegar\n ");
+			printf("   a la ultima casilla del tablero gana.\n ");
 			
 			break; 
 		}
@@ -63,11 +64,12 @@ void tablero(int tam){
     int matriz[tam][tam];
 	
 	printf("\n");
-	printf("E: Entrada al tablero\n");
-	printf("O: casilla de oca\n");
-	printf("F: casilla final\n");
-	printf("La forma de moverse por el tablero es como la de un gusanito,\n");
-	printf("subiendo y bajando por las columnas hasta llegar al final\n");
+	printf(" E: Entrada al tablero\n");
+	printf(" O: casilla de oca\n");
+	printf(" F: casilla final\n");
+	printf("\n");
+	printf(" La forma de moverse por el tablero es como la de un gusanito,\n");
+	printf(" subiendo y bajando por las columnas hasta llegar al final\n");
 	printf("\n");
 	
 
@@ -132,7 +134,7 @@ void tablero(int tam){
     
     int valor=1;
 	printf("\n\n");
-	printf("Tablero de posiciones:\n");
+	printf(" Tablero de posiciones:\n");
 	printf("\n");
 	for(columna=1;columna<=tam;columna++){
 		if(columna % 2==0){
@@ -162,11 +164,11 @@ int Dado (int x){
 	int dado;
 	
 	do{
-		printf("Pulse '0' para lanzar el dado\n"); 
+		printf(" Pulse '0' para lanzar el dado\n"); 
 	    scanf("%d", &x);
 	    
 	    if(x!=0){
-	    	printf("Ese valor no es valido\n");
+	    	printf(" Ese valor no es valido\n");
 		}
 	}while(x!=0);
 	 
@@ -184,11 +186,11 @@ int DadoMediano (int x){ //Es un dado con 5 números máximo
 	int dado; 
 	
 	do{
-		printf("Pulse '0' para lanzar el dado\n"); 
+		printf(" Pulse '0' para lanzar el dado\n"); 
 	    scanf("%d", &x);
 	    
 	    if(x!=0){
-	    	printf("Ese valor no es valido\n");
+	    	printf(" Ese valor no es valido\n");
 		}
 	}while(x!=0);
 	
@@ -206,11 +208,11 @@ int DadoDiminuto (int x){ //Es un dado de máximo 4 números
 	int dado;
 	
 	do{
-		printf("Pulse '0' para lanzar el dado\n"); 
+		printf(" Pulse '0' para lanzar el dado\n"); 
 	    scanf("%d", &x);
 		
 		if(x != 0){
-			printf("Ese valor no es valido\n");
+			printf(" Ese valor no es valido\n");
 		} 
 	}while(x!=0); 
 	
@@ -235,31 +237,31 @@ int pregunta(char tema, int suma){
     char texto[150], solucion[100];
     struct TRespuesta resp[150];
     
-    printf("***ADVERTENCIA***\n");
-    printf("Cuando escriba su respuesta si quiere poner espacio ponga barra baja '_',\n"); 
-	printf("escriba los numeros con letra y todo en minuscula y sin tildes, GRACIAS!!! \n");
+    printf(" ***ADVERTENCIA***\n");
+    printf(" Cuando escriba su respuesta si quiere poner espacio ponga barra baja '_',\n"); 
+	printf(" escriba los numeros con letra y todo en minuscula y sin tildes, GRACIAS!!! \n");
 	printf("\n");
 	
 	if(tema == 'G' || tema == 'g'){
 		         	  
 		entrada=fopen("PREGUNTAS_geografia_e_historia.txt", "r");
 	        if (entrada == NULL) {
-                 printf("Error de lectura\n");
+                 printf(" Error de lectura\n");
                  exit(1); 
            }
            
         respuesta=fopen("RESPUESTAS_geografia_e_historia.txt", "r");
 	        if (respuesta == NULL) {
-                 printf("Error de lectura\n");
+                 printf(" Error de lectura\n");
                  exit(1); 
            }
                         
         do{
-        	printf("Introduce un numero del 1 al 24\n"); 
+        	printf(" Introduce un numero del 1 al 24\n"); 
 	        scanf("%d", &x);
 	        
 	        if(x<=0 || x>=25){
-	        	printf("Ese valor no es valido\n");
+	        	printf(" Ese valor no es valido\n");
 			}
 			
 		}while(x<=0 || x>=25);
@@ -281,10 +283,10 @@ int pregunta(char tema, int suma){
         scanf("%s",solucion);
         
         if(strcmp(solucion,resp[x].respuesta) == 0){
-        	printf("ENHORABUENA!! has acertado!! tu puntucion permanece como %d :)\n", suma);
+        	printf(" ENHORABUENA!! has acertado!! tu puntucion permanece como %d :)\n", suma);
 		}else{
 			suma = suma - 3;
-			printf("Lo sentimos, has fallado, retrocedes tres casillas, ahora su puntuacion es %d :(\n",suma);
+			printf(" Lo sentimos, has fallado, retrocedes tres casillas, ahora su puntuacion es %d :(\n",suma);
 		}
         
         fclose(entrada);
@@ -295,22 +297,22 @@ int pregunta(char tema, int suma){
 		         	  
 		entrada=fopen("PREGUNTAS_literatura_y_arte.txt", "r");
 	        if (entrada == NULL) {
-                 printf("Error de lectura\n");
+                 printf(" Error de lectura\n");
                  exit(1); 
             }
         
         respuesta=fopen("RESPUESTAS_literatura_y_arte.txt", "r");
 	        if (respuesta == NULL) {
-                 printf("Error de lectura\n");
+                 printf(" Error de lectura\n");
                  exit(1); 
            }
                         
         do{
-        	printf("Introduce un numero del 1 al 24\n"); 
+        	printf(" Introduce un numero del 1 al 24\n"); 
 	        scanf("%d", &x);
 	        
 	        if(x<=0 || x>=25){
-	        	printf("Ese valor no es valido\n");
+	        	printf(" Ese valor no es valido\n");
 			}
 			
 		}while(x<=0 || x>=25);
@@ -333,10 +335,10 @@ int pregunta(char tema, int suma){
         scanf("%s",solucion);
         
         if(strcmp(solucion,resp[x].respuesta) == 0){
-        	printf("ENHORABUENA!! has acertado!! tu puntucion permanece como %d :)\n", suma);
+        	printf(" ENHORABUENA!! has acertado!! tu puntucion permanece como %d :)\n", suma);
 		}else{
 			suma = suma - 3;
-			printf("Lo sentimos, has fallado, retrocedes tres casillas, ahora su puntuacion es %d :(\n",suma);
+			printf(" Lo sentimos, has fallado, retrocedes tres casillas, ahora su puntuacion es %d :(\n",suma);
 		}
 		
         fclose(entrada);
@@ -347,22 +349,22 @@ int pregunta(char tema, int suma){
 		         	  
 		entrada=fopen("PREGUNTAS_entretenimiento.txt", "r");
 	        if (entrada == NULL) {
-                 printf("Error de lectura\n");
+                 printf(" Error de lectura\n");
                  exit(1); 
             }
         
         respuesta=fopen("RESPUESTAS_entretenimiento.txt", "r");
 	        if (respuesta == NULL) {
-                 printf("Error de lectura\n");
+                 printf(" Error de lectura\n");
                  exit(1); 
            }
                         
        do{
-        	printf("Introduce un numero del 1 al 24\n"); 
+        	printf(" Introduce un numero del 1 al 24\n"); 
 	        scanf("%d", &x);
 	        
 	        if(x<=0 || x>=25){
-	        	printf("Ese valor no es valido\n");
+	        	printf(" Ese valor no es valido\n");
 			}
 			
 		}while(x<=0 || x>=25);
@@ -384,10 +386,10 @@ int pregunta(char tema, int suma){
         scanf("%s",solucion);
         
         if(strcmp(solucion,resp[x].respuesta) == 0){
-        	printf("ENHORABUENA!! has acertado!! tu puntucion permanece como %d :)\n", suma);
+        	printf(" ENHORABUENA!! has acertado!! tu puntucion permanece como %d :)\n", suma);
 		}else{
 			suma = suma - 3;
-			printf("Lo sentimos, has fallado, retrocedes tres casillas, ahora su puntuacion es %d :(\n",suma);
+			printf(" Lo sentimos, has fallado, retrocedes tres casillas, ahora su puntuacion es %d :(\n",suma);
 		}
 		
         fclose(entrada);
@@ -412,9 +414,9 @@ int main (void){
 	if (opcion1 == 'B' || opcion1 == 'b'){
 		
 	do{
-		printf ("Desea jugar en pareja o solo?\n"); 
-	    printf (" Pulse 1 si jugara solo\n"); 
-	    printf (" Pulse 2 si jugara en pareja\n"); 
+		printf (" Desea jugar en pareja o solo?\n"); 
+	    printf ("  Pulse 1 si jugara solo\n"); 
+	    printf ("  Pulse 2 si jugara en pareja\n"); 
 	    scanf ("%d", &n_jugadores); 
 	    
 	    if(n_jugadores != 1 && n_jugadores !=2){
@@ -423,34 +425,36 @@ int main (void){
 		
 	}while(n_jugadores != 1 && n_jugadores !=2);
 	 
-	
+	printf("\n");
 	for (i=0; i<n_jugadores; i++){
-		printf("Nombre del jugador %d:\n",i+1); 
+		printf(" Nombre del jugador %d:\n",i+1); 
 		scanf("%s", jugadores[i].avatar); 
 	} 
 	 //ahora vamos a ver que jugador empieza en caso de que sean dos jugadores
+	 
 	int numero[1]; 
 	if (n_jugadores==2){
 	do{
 		printf("\n"); 
-		printf("Ahora cada jugador lanzara el dado y el que obtenga\n");
-		printf("el mayor numero sera el primero en empezar la partida.\n");
+		printf(" Ahora cada jugador lanzara el dado y el que obtenga\n");
+		printf(" el mayor numero sera el primero en empezar la partida.\n");
+		printf("\n");
 		for (i=0; i<2; i++){
-			printf("--> Lanza el dado %s\n",jugadores[i].avatar);
+			printf(" --> Lanza el dado %s\n",jugadores[i].avatar);
 			numero[i]= Dado(num);
-			printf("El resultado del dado es %d\n", numero[i]); 
+			printf(" El resultado del dado es %d\n", numero[i]); 
 		}
 		if (numero[0]==numero[1]){
-			printf("Ambos habeis obtenido el mismo numero, volved a lanzar el dado\n"); 
+			printf(" Ambos habeis obtenido el mismo numero, volved a lanzar el dado\n"); 
 		}
 	}while (numero[0]==numero[1]); 	
 		
 		if(numero[0]>numero[1]){ // imprimimos quien empieza segun el numero sorteo anteriormente
-			printf("%s saco el dado mas alto, por lo tanto, es el que empieza a jugar\n", jugadores[0].avatar);
+			printf(" %s saco el dado mas alto, por lo tanto, es el que empieza a jugar\n", jugadores[0].avatar);
 			strcpy(jugador_elegido, jugadores[0].avatar);
 			strcpy(jugador_no_elegido, jugadores[1].avatar); 
 		} else if (numero[1]>numero[0]){
-			printf("%s saco el dado mas alto, por lo tanto, es el que empieza a jugar\n", jugadores[1].avatar);
+			printf(" %s saco el dado mas alto, por lo tanto, es el que empieza a jugar\n", jugadores[1].avatar);
 			strcpy(jugador_elegido, jugadores[1].avatar); 
 			strcpy(jugador_no_elegido, jugadores[0].avatar);
 		}
@@ -458,20 +462,20 @@ int main (void){
 	    strcpy(jugador_elegido, jugadores[0].avatar);	
 	}
 	printf("\n"); 
-	printf("El juego va a iniciar. PREPARATE PARA AVERIGUAR COMO DE LIST@ ERES!\n");
+	printf(" El juego va a iniciar. PREPARATE PARA AVERIGUAR COMO DE LIST@ ERES!\n");
 	printf("\n");
 	
 	char tamano; 
 	do{
 		fflush(stdin); 
-		printf("Como de grande quiere el tablero?\n"); 
-		printf(" D- Diminuto (16 casillas)\n");  
-		printf(" N- Normalito (25 casillas)\n");  
-	    printf(" G- Grandote (36 casillas)\n"); 
+		printf(" Como de grande quiere el tablero?\n"); 
+		printf("  D- Diminuto (16 casillas)\n");  
+		printf("  N- Normalito (25 casillas)\n");  
+	    printf("  G- Grandote (36 casillas)\n"); 
 		scanf("%c", &tamano);
 		
 	    if(tamano !='D' && tamano !='d' && tamano !='N' && tamano !='n' && tamano !='G' && tamano !='g'){
-			printf("Esa opcion no es valida!! Vuelve a intentarlo!!\n");
+			printf(" Esa opcion no es valida!! Vuelve a intentarlo!!\n");
 			scanf("%c", & tamano);
 		}	
 		
@@ -482,10 +486,10 @@ int main (void){
 	char tema;
 	do{
 		fflush(stdin); 
-		printf("Que tematica deseas para las preguntas del juego?\n"); 
-		printf(" E- Entretenimiento\n");  
-		printf(" A- Arte y literatura\n");  
-	    printf(" G- Geografia e historia\n"); 
+		printf(" Que tematica deseas para las preguntas del juego?\n"); 
+		printf("  E- Entretenimiento\n");  
+		printf("  A- Arte y literatura\n");  
+	    printf("  G- Geografia e historia\n"); 
 		scanf("%c", &tema);
 		
 	    if(tema !='E' && tema !='e' && tema !='A' && tema !='a' && tema !='G' && tema !='g'){
@@ -508,7 +512,7 @@ int main (void){
 	suma2=0;
 	do{	 //Realizamos el bucle para que el turno de los jugadores vaya cambiando alo largo del juego
 	    printf("\n");	
-		printf("--> Turno de %s\n",jugador_elegido);
+		printf(" --> Turno de %s\n",jugador_elegido);
 		//Dependiendo del tamaño del tablero, hay distintos dados con más o menos números 
 		if(tamano == 'D' || tamano == 'd'){
     	     dado_elegido= DadoDiminuto(x);
@@ -524,7 +528,7 @@ int main (void){
         }
 		
 	    suma1 = suma1 + dado_elegido;
-	    printf("El resultado del dado es %d y lleva una suma de puntos %d\n", dado_elegido,suma1);
+	    printf(" El resultado del dado es %d y lleva una suma de puntos %d\n", dado_elegido,suma1);
 	    //Lo utilizamos para ver cuando el jugador 1 ha caido en la oca
 	    if(tamano=='D'|| tamano=='d'){
 			 if (suma1==2|| suma1==4||suma1==6||suma1==8||suma1==10||suma1==12||suma1==14){
@@ -548,18 +552,18 @@ int main (void){
 	    encontrado=0;
 		if(suma1>=tam){
 	    	strcpy(ganador,jugador_elegido);
-	    	printf("Enhorabuena!!! %s has llegado al final, eres el ganad@r\n",ganador);
+	    	printf(" Enhorabuena!!! %s has llegado al final, eres el ganad@r\n",ganador);
 	    	encontrado=1;
 	    	break;
 		}else if(suma2>=tam){
 			strcpy(ganador,jugador_no_elegido);
-			printf("Enhorabuena!!! %s has llegado al final, eres el ganad@r\n",ganador);
+			printf(" Enhorabuena!!! %s has llegado al final, eres el ganad@r\n",ganador);
 			encontrado=1;
 			break;
 		}
 		
 		printf("\n");
-		printf("--> Turno de %s\n",jugador_no_elegido);
+		printf(" --> Turno de %s\n",jugador_no_elegido);
 		//Dependiendo del tamaño del tablero, hay distintos dados con más o menos números 
 		if(tamano == 'D' || tamano == 'd'){
     	     dado_elegido= DadoDiminuto(x);
@@ -573,7 +577,7 @@ int main (void){
          }
 		
 		suma2 = suma2 + dado_elegido;
-	    printf("El resultado del dado es %d y lleva una suma de puntos %d\n", dado_elegido,suma2); 
+	    printf(" El resultado del dado es %d y lleva una suma de puntos %d\n", dado_elegido,suma2); 
 	    //Lo utilizamos para ver cuando el jugador 2 ha caido en la oca
 	    if(tamano=='D'|| tamano=='d'){
 			 if (suma2==2|| suma2==4||suma2==6||suma2==8||suma2==10||suma2==12||suma2==14){
@@ -597,12 +601,12 @@ int main (void){
 	    encontrado=0;
 	    if(suma1>=tam){
 	    	strcpy(ganador,jugador_elegido);
-	    	printf("Enhorabuena!!! %s has llegado al final, eres el ganad@r\n",ganador);
+	    	printf(" Enhorabuena!!! %s has llegado al final, eres el ganad@r\n",ganador);
 	    	encontrado=1;
 	    	break;
 		}else if(suma2>=tam){
 			strcpy(ganador,jugador_no_elegido);
-			printf("Enhorabuena!!! %s has llegado al final, eres el ganad@r\n",ganador);
+			printf(" Enhorabuena!!! %s has llegado al final, eres el ganad@r\n",ganador);
 			encontrado=1;
 			break;
 		}
@@ -614,7 +618,7 @@ int main (void){
 	suma1=0;
 	do{ 
 		printf("\n"); 	
-		printf("--> Turno de %s\n",jugadores[0].avatar);
+		printf(" --> Turno de %s\n",jugadores[0].avatar);
 		//Dependiendo del tamaño del tablero, hay distintos dados con más o menos números 
 		if(tamano == 'D' || tamano == 'd'){
     	     dado_elegido= DadoDiminuto(x);
@@ -630,7 +634,7 @@ int main (void){
         }
          
 	    suma1 = suma1 + dado_elegido;
-	    printf("El resultado del dado es %d y lleva una suma de puntos %d\n", dado_elegido,suma1);
+	    printf(" El resultado del dado es %d y lleva una suma de puntos %d\n", dado_elegido,suma1);
 	    //Lo utilizamos para ver cuando el jugador ha caido en la oca
 	    if(tamano=='D'|| tamano=='d'){
 			 if (suma1==2|| suma1==4||suma1==6||suma1==8||suma1==10||suma1==12||suma1==14){
@@ -655,7 +659,7 @@ int main (void){
 		encontrado=0;
 	    if(suma1>=tam){
 	    	strcpy(ganador,jugadores[0].avatar);
-	    	printf("Enhorabuena!!! %s has llegado al final, eres el ganad@r\n", ganador);
+	    	printf(" Enhorabuena!!! %s has llegado al final, eres el ganad@r\n", ganador);
 	    	encontrado=1;
 	    	break;
 		}
@@ -665,7 +669,7 @@ int main (void){
     }
     
     }else{
-    	printf("Hasta otra!!!");
+    	printf(" Hasta otra!!!");
     	break;
 	}
     
