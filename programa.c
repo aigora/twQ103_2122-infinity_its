@@ -532,19 +532,19 @@ int main (void){
 	    //Lo utilizamos para ver cuando el jugador 1 ha caido en la oca
 	    if(tamano=='D'|| tamano=='d'){
 			 if (suma1==2|| suma1==4||suma1==6||suma1==8||suma1==10||suma1==12||suma1==14){
-		         printf("%s--> Has caido en la oca, acierta la siguiente pregunta para continuar avanzando\n\n", jugadores[0].avatar);
+		         printf(" - Has caido en la oca, acierta la siguiente pregunta para continuar avanzando\n\n");
 				 suma1=pregunta(tema,suma1);
 		    }        
 		}
 		if(tamano=='N'|| tamano=='n'){
 			 if (suma1==3|| suma1==5||suma1==7||suma1==9||suma1==11||suma1==13||suma1==15||suma1==17||suma1==19||suma1==21||suma1==23){
-			     printf("%s--> Has caido en la oca, acierta la siguiente pregunta para continuar avanzando\n\n", jugadores[0].avatar);
+			     printf(" - Has caido en la oca, acierta la siguiente pregunta para continuar avanzando\n\n");
 			     suma1=pregunta(tema,suma1);
 			     }
 		}
 		if(tamano=='G'|| tamano=='g'){
 			if (suma1==2||suma1==4||suma1==6||suma1==8||suma1==10|| suma1==12||suma1==14||suma1==16||suma1==18||suma1==20||suma1==22||suma1==24||suma1==26||suma1==28||suma1==30||suma1==32||suma1==34){
-			     printf("%s--> Has caido en la oca, acierta la siguiente pregunta para continuar avanzando\n\n", jugadores[0].avatar);
+			     printf(" - Has caido en la oca, acierta la siguiente pregunta para continuar avanzando\n\n");
 			     suma1=pregunta(tema,suma1);
 		    }
 		}
@@ -581,19 +581,19 @@ int main (void){
 	    //Lo utilizamos para ver cuando el jugador 2 ha caido en la oca
 	    if(tamano=='D'|| tamano=='d'){
 			 if (suma2==2|| suma2==4||suma2==6||suma2==8||suma2==10||suma2==12||suma2==14){
-		         printf("%s--> Has caido en la oca, acierta la siguiente pregunta para continuar avanzando\n\n", jugadores[1].avatar);
+		         printf(" - Has caido en la oca, acierta la siguiente pregunta para continuar avanzando\n\n");
 		         suma2=pregunta(tema,suma2);
 		        }
 		}
 		if(tamano=='N'|| tamano=='n'){
 			 if (suma2==3|| suma2==5||suma2==7||suma2==9||suma2==11||suma2==13||suma2==15||suma2==17||suma2==19||suma2==21||suma2==23){
-			     printf("%s--> Has caido en la oca, acierta la siguiente pregunta para continuar avanzando\n\n", jugadores[1].avatar);
+			     printf(" - Has caido en la oca, acierta la siguiente pregunta para continuar avanzando\n\n");
 			     suma2=pregunta(tema,suma2);
 			    }
 		}
 		if(tamano=='G'|| tamano=='g'){
 			 if (suma2==2||suma2==4||suma2==6||suma2==8||suma2==10|| suma2==12||suma2==14||suma2==16||suma2==18||suma2==20||suma2==22||suma2==24||suma2==26||suma2==28||suma2==30||suma2==32||suma2==34){
-			     printf("%s--> Has caido en la oca, acierta la siguiente pregunta para continuar avanzando\n\n", jugadores[1].avatar); 
+			     printf(" - Has caido en la oca, acierta la siguiente pregunta para continuar avanzando\n\n"); 
 			     suma2=pregunta(tema,suma2); 
 		    }
 	    }
@@ -638,19 +638,19 @@ int main (void){
 	    //Lo utilizamos para ver cuando el jugador ha caido en la oca
 	    if(tamano=='D'|| tamano=='d'){
 			 if (suma1==2|| suma1==4||suma1==6||suma1==8||suma1==10||suma1==12||suma1==14){
-		         printf("%s--> Has caido en la oca, acierta la siguiente pregunta para continuar avanzando\n\n", jugadores[0].avatar);
+		         printf(" - Has caido en la oca, acierta la siguiente pregunta para continuar avanzando\n\n");
 		         suma1=pregunta(tema,suma1);
 		    }        
 		}
 		if(tamano=='N'|| tamano=='n'){
 			 if (suma1==3|| suma1==5||suma1==7||suma1==9||suma1==11||suma1==13||suma1==15||suma1==17||suma1==19||suma1==21||suma1==23){
-			     printf("%s--> Has caido en la oca, acierta la siguiente pregunta para continuar avanzando\n\n", jugadores[0].avatar);
+			     printf(" - Has caido en la oca, acierta la siguiente pregunta para continuar avanzando\n\n");
 			     suma1=pregunta(tema,suma1);
 			}
 		}
 		if(tamano=='G'|| tamano=='g'){
 			if (suma1==2||suma1==4||suma1==6||suma1==8||suma1==10|| suma1==12||suma1==14||suma1==16||suma1==18||suma1==20||suma1==22||suma1==24||suma1==26||suma1==28||suma1==30||suma1==32||suma1==34){
-			     printf("%s--> Has caido en la oca, acierta la siguiente pregunta para continuar avanzando\n\n", jugadores[0].avatar);
+			     printf(" - Has caido en la oca, acierta la siguiente pregunta para continuar avanzando\n\n");
 			     suma1=pregunta(tema,suma1);
 		    }
 		}
